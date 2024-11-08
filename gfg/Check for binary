@@ -1,0 +1,12 @@
+//Given a non-empty sequence of characters str, return true if
+sequence is Binary, else return false//
+
+bool isBinary(string str){
+   // Your code here
+   for(int i = 0; i<str.length();i++){
+        if(str[i]!='0' && str[i]!='1'){
+            return false;
+        }
+    }
+    return true;
+}
