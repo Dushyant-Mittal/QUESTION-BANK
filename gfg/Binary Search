@@ -1,0 +1,25 @@
+Given a sorted array arr and an integer k, find the position(0-based indexing)
+at which k is present in the array using binary search.
+Note: If multiple occurrences are there, please return the smallest index.
+
+// User function template for C++
+class Solution {
+    public:
+    int binarysearch(vector<int>&arr, int k) {
+        int left = 0;
+        int right = arr.size()-1;
+        while(left <= right){
+            int middle = (left + right) / 2;
+            if(arr[middle] == k){
+                return middle;
+            }
+            if(k > arr[middle]) {
+                left = middle + 1;
+            }
+            else{
+                right = middle - 1;
+            }
+        }
+        return -1;
+    }
+};
