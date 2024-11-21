@@ -1,0 +1,17 @@
+Print numbers from 1 to n without the help of loops.
+You only need to complete the function printNos() that
+takes n as a parameter and prints the number from 1 to n recursively.
+
+class Solution{
+    public:
+    //Complete this function
+    void printNos(int N)
+    {
+        //Your code here
+        if(N>=1) 
+        {
+            printNos(N-1);
+            cout<< N <<" ";
+        }
+    }
+};
