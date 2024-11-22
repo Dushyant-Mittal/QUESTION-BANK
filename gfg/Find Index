@@ -1,0 +1,27 @@
+Given an unsorted array arr[] of integers and a key which is present in this array.
+You need to write a program to find the start index( index where the element is first
+found from left in the array ) and end index( index where the element is first found
+from right in the array ) return an array of length 2 with elements start index and 
+end index.(0 based indexing is used)
+If the key does not exist in the array then return -1 for both start and end index in this case.
+
+class Solution {
+  public:
+    vector<int> findIndex(vector<int>& arr, int key) {
+        // code here.
+        int n=arr.size();
+        int x=0, y=n-1;
+        while(x<=y){
+            if(arr[x]!=key){
+                x++;
+            }
+            else if(arr[y]!=key){
+                y--;
+            }
+            else{
+                return {x,y};
+            }
+        }
+        return {-1,-1};
+    }
+};
