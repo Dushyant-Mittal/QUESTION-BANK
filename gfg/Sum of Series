@@ -1,0 +1,10 @@
+Write a program to find the sum of the given series 1+2+3+ . . . . . . (n terms) 
+
+
+class Solution {
+  public:
+    long long seriesSum(int n) {
+        // code here
+        return static_cast<long long>(n) * (n + 1) / 2;
+    }
+};
