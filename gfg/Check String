@@ -1,0 +1,14 @@
+Given a string, check if all its characters are the same or not.
+
+class Solution{
+    public:
+        bool check (string s){
+        	//code here.
+        	for(int i=0; i<s.length()-1; i++){
+                if(s[i]!=s[i+1]){
+                    return false;
+                }
+            }
+            return true;
+        }
+};
