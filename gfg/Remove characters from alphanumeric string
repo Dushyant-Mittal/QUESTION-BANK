@@ -1,0 +1,14 @@
+Remove all characters except the numeric characters from an alphanumeric string.
+
+class Solution{
+public:	
+	string removeCharacters(string S){
+	    string s;
+        for(char c:S){
+            if(c<='9' && c>='0'){
+                s.push_back(c);
+            }
+        }
+        return s;
+	}
+};
