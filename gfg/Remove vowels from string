@@ -1,0 +1,16 @@
+Given a string, remove the vowels from the string.
+
+class Solution{
+public:	
+	string removeVowels(string S){
+	    // Your code goes here
+	    string result;
+	    for(char c: S ){
+	        if(c=='A'||c=='E'||c=='I'||c=='O'||c=='U'||c=='a'||c=='e'||c=='i'||c=='o'||c=='u'){
+                continue;
+            }
+            result+=c;
+        }
+        return result;
+	}
+};
