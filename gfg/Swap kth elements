@@ -1,0 +1,10 @@
+Given an array arr, swap the kth element from the beginning with the kth element from the end.
+
+
+class Solution {
+  public:
+    void swapKth(int n, int k, vector<int> &arr) {
+        // code here
+        swap(arr[k-1],arr[n-k]);
+    }
+};
