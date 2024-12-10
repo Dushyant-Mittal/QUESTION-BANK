@@ -1,0 +1,17 @@
+Given an array arr, find the average or mean of the prefix array at every index.
+
+//User function template for C++
+
+class Solution{
+public:	
+	vector<float> streamAvg(int arr[], int n) {
+	    // code here
+	    vector<float> ans;
+        float sum = 0;
+        for(int i=1; i<=n; i++){
+            sum = sum + arr[i-1];
+            ans.push_back(sum/i);
+        }
+        return ans;
+	}
+};
