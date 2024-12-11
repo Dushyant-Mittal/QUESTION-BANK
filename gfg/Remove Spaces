@@ -1,0 +1,16 @@
+Given a string, remove spaces from it. 
+
+class Solution{
+  public:
+    string modify (string s){
+        //code here.
+        string temp;
+        for (int i=0; i<s.size(); i++) {
+            if(s[i]==' '){
+                continue;
+            }
+            temp+=s[i];
+        }
+        return temp;
+    }
+};
