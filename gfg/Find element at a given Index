@@ -1,0 +1,10 @@
+Given an array arr of integers and an index key(0-based index). Your task is to return the element present at the index key in the array.
+
+
+class Solution {
+  public:
+    int findElementAtIndex(int n, int key, vector<int> &arr) {
+        // code here
+        return arr[key];
+    }
+};
