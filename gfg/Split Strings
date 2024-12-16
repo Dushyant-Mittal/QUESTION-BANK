@@ -1,0 +1,27 @@
+Given a string S which consists of alphabets , numbers and special characters. You need to write a program to split the strings in three different strings S1, S2 and S3 such that the string S1 will contain all the alphabets present in S , the string S2 will contain all the numbers present in S and S3 will contain all special characters present in S.  The strings S1, S2 and S3 should have characters in same order as they appear in input.
+
+class Solution{   
+public:
+    vector<string> splitString(string S){ 
+        // code here 
+        string S1;
+        string S2;
+        string S3;
+        vector<string> ans;
+        for(int i=0; i<S.length(); i++){
+            if(S[i]>='A' && S[i]<='Z' || S[i]>='a' && S[i]<='z'){
+                S1+=S[i];
+            }
+            else if(S[i]>='0' && S[i]<='9'){
+                S2+=S[i];
+            }
+            else{
+                S3+=S[i];
+            }
+        }
+        ans.push_back(S1);
+        ans.push_back(S2);
+        ans.push_back(S3);
+        return ans;
+    } 
+};
