@@ -1,0 +1,14 @@
+Given an unsorted array arr. Find the count of elements less than or equal to the given element x.
+
+
+
+int countOfElements(int arr[], int n, int x) 
+{
+    int count=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]<=x){
+            count=count+1;
+        }
+    }
+    return count;
+}
