@@ -1,0 +1,16 @@
+Given a string s of length n, find the pattern of the strings as shown below in the examples.
+
+//User function template for C++
+class Solution{
+public:	
+	
+	vector<string> pattern(string S)
+	{
+	    vector<string> v;
+        while(S.length()>0){
+        v.push_back(S);
+        S.pop_back();
+	    }
+	    return v;
+	}
+};
