@@ -1,0 +1,14 @@
+Given a string s. The task is to convert characters of string to lowercase.
+
+class Solution {
+  public:
+    string toLower(string s) {
+        // code here
+        for(char &c: s){
+            if(c>='A' && c<='Z'){
+                c+=('a'-'A');
+            }
+        }
+        return s;
+    }
+};
