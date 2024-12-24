@@ -1,0 +1,15 @@
+Given a string S and two integers L and R. Print the characters in the range L to R of the string.
+NOTE: Assume zero based indexing.
+
+// User function Template for C++
+class Solution {
+  public:
+    string javaSub(string S, int L, int R) {
+        // code here
+        string res="";
+        for(int i=L; i<R+1; i++){
+            res+=S[i];
+        }
+        return res;
+    }
+};
