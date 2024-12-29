@@ -1,0 +1,11 @@
+Given two integers A and B. Your task is to return their product.
+
+class Solution{   
+public:
+    int multiplication(int A, int B){
+        // code here 
+        int ans;
+        ans=A*B;
+        return ans;
+    }
+};
