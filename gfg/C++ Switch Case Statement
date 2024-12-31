@@ -1,0 +1,34 @@
+Given a number N, if the number is between 1 and 10 both inclusive then return the number in words (Lower case English Alphabets) otherwise return "not in range".
+
+class Solution{   
+public:
+    string isInRange(int N){
+        // code here 
+        for(int i;i<=N;i++){
+           switch(N){
+                case 1:
+                return "one";
+                case 2:
+                return "two";
+                case 3:
+                return "three";
+                case 4:
+                return "four";
+                case 5:
+                return "five";
+                case 6:
+                return "six";
+                case 7:
+                return "seven";
+                case 8:
+                return "eight";
+                case 9:
+                return "nine"; 
+                case 10:
+                return "ten";
+                default:
+                return"not in range";
+            }
+        }
+    }
+};
