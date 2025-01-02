@@ -1,0 +1,13 @@
+Given two numbers A and B. Perform addition,multiplication, subtraction and division on these two numbers.
+
+class Solution {
+  public:
+    vector<int> cppOperators(int A, int B) {
+        // code here
+        int a=A+B;
+        int b=A*B;
+        int c=abs(B-A);
+        int d=A>B?A/B:B/A;
+        return {a,b,c,d};
+    }
+};
