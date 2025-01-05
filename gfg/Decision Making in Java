@@ -1,0 +1,19 @@
+Given two integers, n and m. The task is to check the relation between n and m. Return "lesser" if n < m,  "equal" if n == m, and "greater" if n > m.
+
+//User function Template for Java
+class Solution {
+    public static String compareNM(int n, int m) {
+        // code here
+        String ans;
+        if(n<m){
+            ans="lesser";
+        }
+        else if(n>m){
+            ans="greater";
+        }
+        else{
+            ans="equal";
+        }
+        return ans;
+    }
+}
