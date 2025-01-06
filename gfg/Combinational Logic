@@ -1,0 +1,13 @@
+Construct a 6 input gate which performs the following logical operation:
+ (not(A)).B + C.D +E.(not(F))
+where A, B, C, D, E and F are the inputs to the 6 input gate.
+
+
+// User function Template for C++
+class Solution {
+  public:
+    int logicalOperation(int A,int B,int C,int D,int E,int F){
+        // code here
+        return ((!(A)) && B || C && D || E && (!(F)));
+    }
+};
