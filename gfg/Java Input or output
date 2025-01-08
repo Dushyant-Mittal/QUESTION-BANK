@@ -1,0 +1,11 @@
+Given a string S and an integer number N, print the output in the form: "The input string :S" and "The input integer :N" in the two separate lines.
+
+
+//User function Template for Java
+class Solution{
+    static void printIntString(String S,int N){
+        // code here
+        System.out.println("The input string :"+S);
+        System.out.println("The input integer :"+N);
+    }
+}
