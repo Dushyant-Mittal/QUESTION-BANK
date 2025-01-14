@@ -1,0 +1,11 @@
+Given a number N, find the cube root of N.
+
+Note: We need to print the floor value of the result.
+
+class Solution {
+  public:
+    int cubeRoot(int N) {
+        // code here
+        return cbrt(N);    
+    }
+};
