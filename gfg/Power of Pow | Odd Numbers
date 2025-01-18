@@ -1,0 +1,13 @@
+Given a single integer N, your task is to find the sum of the square of the first N odd natural Numbers.
+ 
+class Solution{
+	public:
+		long long int sum_of_square_oddNumbers(long long int n){
+		    // Code here.
+		    long long ans=0;
+            for(int i=1; i<=n*2; i+=2){
+                ans=ans+(i*i);
+            }
+            return ans;
+		}
+};
