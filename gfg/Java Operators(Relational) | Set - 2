@@ -1,0 +1,21 @@
+Complete the function relationalOperators() that compares two integers a and b. Print:
+
+"a is greater than b" if a is greater than b
+"a is less than b" if a is less than b
+"a is equal to b" if a equals b
+Each output should be followed by a newline character.
+
+class Solution
+{
+public:
+    void relationalOperators(int A,int B){
+        // code here
+        if(A>B){
+            cout<<A<<" is greater than "<<B<<endl;
+        }else if(A<B){
+            cout<<A<<" is less than "<<B<<endl;
+        }else {
+            cout<<A<<" equal to "<<B<<endl;
+        }
+    }
+};
