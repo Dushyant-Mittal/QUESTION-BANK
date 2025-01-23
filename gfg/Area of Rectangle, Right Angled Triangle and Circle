@@ -1,0 +1,9 @@
+Given the length of rectangle, width of rectangle, base of right angled triangle, perpendicular of right angled triangle and radius of circle respectively. Calculate the area of rectangle, right angled triangle and circle.
+
+ class Solution {
+  public:
+    vector<int> getAreas(int L , int W , int B , int H , int R) {
+        // code here
+        return{ L*W , (B*H)/2 , 3.14 *R*R };
+    }
+};
