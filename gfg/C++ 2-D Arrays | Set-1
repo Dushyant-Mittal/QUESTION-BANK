@@ -1,0 +1,19 @@
+Given a 2-d array of integers having N*N elements, print the transpose of the array.
+
+
+
+vector<vector<int>> transpose(int a[][M], int n)
+{
+    // Code here
+    vector<vector<int>>ans;
+    for(int i=0;i<n;i++)
+    {
+        vector<int>v;
+        for(int j=0;j<n;j++)
+        {
+            v.push_back(a[j][i]);
+        }
+        ans.push_back(v);
+    }
+    return ans;
+}
