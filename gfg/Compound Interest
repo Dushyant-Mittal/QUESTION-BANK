@@ -1,0 +1,9 @@
+Calculate the amount for given principal amount P , time T(in years), compounded N times in a year at rate R. Calculate floor of future value of given principal amount.
+
+ class Solution {
+  public:
+    int getCompundInterest(int P, int T , int N , int R) {
+        // code here
+        return P*pow((1+((R/100.0)/N)),N*T);
+    }
+};
