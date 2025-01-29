@@ -1,0 +1,16 @@
+Create the multiplication table of a given number N and return the table as an array.
+
+//User function Template for C++
+class Solution
+{
+public:
+    vector<int> getTable(int N)
+    {
+        // Write Your Code here
+        vector<int>ans;
+        for(int i=1; i<11; i++){
+            ans.push_back(i*N);
+        }
+        return ans;
+    }
+};
