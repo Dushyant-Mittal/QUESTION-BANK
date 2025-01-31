@@ -1,0 +1,25 @@
+Read a value and store it in the appropriate Java Data Type. 
+
+
+
+
+class Solution {
+
+    int javaIntType(Scanner sc) {
+        // code here
+        int x = sc.nextInt();
+        return x;
+    }
+    
+    String javaStringType(Scanner sc) {
+        // code here
+        String y=sc.next();
+        return y;
+    }
+    
+    float javaFloatType(Scanner sc) {
+        // code here
+        float z=sc.nextFloat();
+        return z;
+    }
+};
