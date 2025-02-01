@@ -1,0 +1,8 @@
+Given two positive integers n1 and n2, the task is to find the remainder when n1 is divided by n2.
+
+class Solution{
+public:
+    int findRemainder(int num1,int num2){
+        return num1%num2;
+    }
+};
