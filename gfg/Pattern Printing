@@ -1,0 +1,16 @@
+Given a number N. The task is to print a series of asterisk(*) from 1 till N terms with increasing order and difference being 1.
+
+//User function Template for C++
+class Solution
+{
+public:
+    void printPattern(int N)
+    {
+        // Write Your Code here
+        string s="*";
+        for(int i=0; i<N; i=i+1){
+            cout<<s<<" ";
+            s+="*";
+        }
+    }
+};
