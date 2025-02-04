@@ -1,0 +1,13 @@
+You are given two numbers a and b. Your task is to swap the given two numbers.
+
+Note: Try to do it without a temporary variable.
+
+//User function Template for C++
+
+class Solution{   
+public:
+    pair<int, int> get(int a, int b){
+        //complete the function here
+        return {b , a};
+    }
+};
