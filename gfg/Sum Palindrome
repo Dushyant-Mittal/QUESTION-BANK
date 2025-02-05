@@ -1,0 +1,23 @@
+Given a number, reverse it and add it to itself unless it becomes a palindrome or return -1 if the number of iterations becomes more than 5. Return that palindrome number if it becomes a palindrome else, it returns -1.
+
+// User function Template for C++
+class Solution {
+  public:
+    long long isSumPalindrome(long long n) {
+        // code here
+        long long sum=n, rev=0;
+        for(int i=0; i<=5; i++){
+            n=sum;
+            rev=0;
+            while(n>0){
+                rev=(rev*10)+n%10;
+                n/=10;
+            }
+            if(rev==sum){
+                return sum;
+            }
+            sum+=rev;
+        }
+        return -1;
+    }
+};
