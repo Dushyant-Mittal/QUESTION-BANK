@@ -1,0 +1,14 @@
+Given length l, width b and height h of a cuboid. Your task is to return an array containing the total surface area and volume of the cuboid.
+
+
+class Solution{
+	public:
+	vector<long long int> find(int l, int b, int h)
+	{
+	    // Code here
+	    vector<long long int>v;
+        v.push_back((long long) 2*((long long)l*b+(long long)b*h+(long long)l*h));
+        v.push_back((long long)l*b*h);
+        return v;
+	}  
+};
