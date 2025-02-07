@@ -1,0 +1,17 @@
+Find the focal length of the spherical mirror with the given radius-of-curvature R.
+NOTE
+
+The focal length of the 'convex' mirror floor(-R/2) and that of the 'concave' mirror is floor(R/2).
+
+class Solution{
+	public:
+	int findFocalLength(float R, string type){
+	    //Code here
+	    if(type=="convex"){
+            return -ceil(R/2);
+        }
+        else{
+            return R/2;
+        }
+	}
+};
