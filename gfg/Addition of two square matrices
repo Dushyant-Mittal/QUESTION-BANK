@@ -1,0 +1,18 @@
+Given two square matrices matrixA and matrixB of size n x n.  Find the addition of these two matrices.
+
+Note :- You don't have to return anything in this question (Refer YourTask section).
+
+//User function Template for C++
+
+class Solution {
+public:
+    void Addition(vector<vector<int> >& matrixA, vector<vector<int>>&matrixB) {
+        // Code here
+        int size=matrixA.size();
+        for(int i=0; i<size; i++){
+            for(int j =0;j<size;j++){
+                matrixA[i][j]+=matrixB[i][j];
+            }
+        }
+    }
+};
