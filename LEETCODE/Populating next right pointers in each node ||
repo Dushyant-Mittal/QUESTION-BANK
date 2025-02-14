@@ -1,0 +1,39 @@
+Given a binary tree
+
+struct Node {
+  int val;
+  Node *left;
+  Node *right;
+  Node *next;
+}
+Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
+
+Initially, all next pointers are set to NULL.
+
+ class Solution{
+public:
+    Node* connect(Node* root){
+        if (!root){
+            return root;
+        }
+        queue<Node*>q;
+        q.push(root);
+        q.push(NULL);
+        while(q.size()>1){
+            Node* curr=q.front();
+            q.pop();
+            if(!curr){
+                q.push(NULL);
+                continue;
+            }
+            curr->next=q.front();
+            if(curr->left){
+                q.push(curr->left);
+            }
+            if(curr->right){
+                q.push(curr->right);
+            }
+        }
+        return root;
+    }
+};
