@@ -1,0 +1,23 @@
+Given a Binary Tree, your task is to return its In-Order Traversal.
+
+An inorder traversal first visits the left child (including its entire subtree), then visits the node, and finally visits the right child (including its entire subtree).
+
+Follow Up: Try solving this with O(1) auxiliary space.
+
+class Solution {
+  public:
+    void inorder(Node* root,vector<int> &ans){
+        if(!root){
+            return;
+        }
+        inorder(root->left,ans);
+        ans.push_back(root->data);
+        inorder(root->right,ans);
+    }
+    // Function to return a list containing the inorder traversal of the tree.
+    vector<int> inOrder(Node* root) {
+        vector<int> ans;
+        inorder(root,ans);
+        return ans;
+    }
+};
