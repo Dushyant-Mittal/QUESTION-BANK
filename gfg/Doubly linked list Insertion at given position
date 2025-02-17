@@ -1,0 +1,28 @@
+Given a doubly-linked list, a position p, and an integer x. The task is to add a new node with value x at the position just after pth node in the doubly linked list and return the head of the updated list.
+
+class Solution {
+  public:
+    // Function to insert a new node at given position in doubly linked list.
+    Node* addNode(Node* head, int pos, int data) {
+        // Create a new node with the given data
+        Node* newNode = new Node(data);
+        if(head==nullptr){
+            return newNode;
+        }
+        Node* current=head;
+        int count=0;
+        while (count<pos && current!=nullptr){
+            current=current->next;
+            count++;
+        }
+        if(current!=nullptr){
+            newNode->next=current->next;
+            newNode->prev=current;
+            if(current->next!=nullptr){
+                current->next->prev=newNode;
+            }
+            current->next=newNode;
+        }
+        return head;
+    }
+};
