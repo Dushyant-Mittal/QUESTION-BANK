@@ -1,0 +1,16 @@
+Given a N X N binary Square Matrix where each row and column of the matrix is sorted in ascending order. Find the total number of zeros present in the matrix.
+
+class Solution{
+public:
+	int countZeros(vector<vector<int>>A){
+        int c=0;
+        for(int i=0; i<A.size(); i++){
+            for(int j=0; j<A[i].size(); j++){
+                if(A[i][j]==0){
+                    c++;
+                }
+            }
+        }
+        return c;
+    }
+};
