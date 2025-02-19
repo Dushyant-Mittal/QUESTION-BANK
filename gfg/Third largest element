@@ -1,0 +1,11 @@
+Given an array, arr of positive integers. Find the third largest element in it. Return -1 if the third largest element is not found.
+
+class Solution {
+  public:
+    int thirdLargest(vector<int> &arr) {
+        // Your code here
+        int n = arr.size();
+        sort(arr.begin(), arr.end());
+        return arr[n-3];
+    }
+};
