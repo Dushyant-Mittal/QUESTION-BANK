@@ -1,0 +1,19 @@
+Given a Binary Search Tree and a node value X, find if the node with value X is present in the BST or not.
+
+
+// Function to search a node in BST.
+bool search(Node* root, int x) {
+    // Your code here
+    Node* temp=root;
+    while(temp!=NULL){
+        if(temp->data==x){
+            return 1;
+        }
+        if(temp->data<x){
+            temp=temp->right;
+        }else{
+            temp=temp->left;
+        }
+    }
+    return 0;
+}
