@@ -1,0 +1,19 @@
+Given the head of a Singly Linked List and a value x, insert that value x at the end of the LinkedList and return the modified Linked List.
+
+
+class Solution {
+  public:
+    Node *insertAtEnd(Node *head, int x) {
+        // Code here
+        Node* temp=new Node(x);
+        Node* tail=head;
+        if(head==NULL){
+            return temp;
+        }
+        while(tail->next!=NULL){
+            tail=tail->next;
+        }
+        tail->next=temp;
+        return head;
+    }
+};
