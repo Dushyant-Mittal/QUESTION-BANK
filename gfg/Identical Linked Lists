@@ -1,0 +1,23 @@
+Given the two singly Linked Lists respectively. The task is to check whether two linked lists are identical or not. 
+Two Linked Lists are identical when they have the same data and with the same arrangement too. If both Linked Lists are identical then return true otherwise return false. 
+
+class Solution {
+  public:
+    // Function to check if two linked lists are identical
+    bool areIdentical(struct Node *head1, struct Node *head2) {
+        // code here
+        Node* curr=head1;
+        Node* curr1=head2;
+        while(curr!=NULL&&curr1!=NULL){
+            if(curr->data!=curr1->data){
+                return false;
+            }
+            curr=curr->next;
+            curr1=curr1->next;
+        }
+        if(curr==NULL&&curr1==NULL){
+            return true;
+        }
+        return false;
+    }
+};
