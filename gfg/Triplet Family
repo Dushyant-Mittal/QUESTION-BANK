@@ -1,0 +1,18 @@
+Given an array arr of integers. First sort the array then find whether three numbers are such that the sum of two elements equals the third element.
+
+class Solution {
+  public:
+    bool findTriplet(vector<int>& arr) {
+        // Your code
+        int n=arr.size();
+        set<int>m(arr.begin(),arr.end());
+        for(int i=0; i<n; i++){
+            for(int j=i+1; j<n; ++j){
+                if(m.find(arr[i]+arr[j])!=m.end()){
+                    return true;
+                }
+            }  
+        }
+        return false;
+    }
+};
