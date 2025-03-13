@@ -1,0 +1,18 @@
+Given a Binary Tree of size n, your task is to return the count of all the non-leaf nodes of the given binary tree.
+
+class Solution {
+  public:
+    int countNonLeafNodes(Node* root) {
+        // Code here
+        if(root==NULL){
+            return 0;
+        }
+        if(root->left||root->right){
+            return 1+ countNonLeafNodes(root->left)
+                    +countNonLeafNodes(root->right);
+        }
+        else{
+            return 0;
+        }
+    }
+};
