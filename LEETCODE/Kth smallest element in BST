@@ -1,0 +1,19 @@
+Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.
+
+ class Solution {
+public:
+    void preOrder(TreeNode* root, vector<int> &v){
+        if(root==NULL){
+            return;
+        }
+        v.push_back(root->val);
+        preOrder(root->left, v);
+        preOrder(root->right, v);      
+    }
+    int kthSmallest(TreeNode* root, int k) {
+        vector<int> v; 
+        preOrder(root, v);
+        sort(v.begin(), v.end());
+        return v[k-1];
+    }
+};
