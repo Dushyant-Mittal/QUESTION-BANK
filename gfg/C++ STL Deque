@@ -1,0 +1,40 @@
+Implement different operations on a Deque i.e. adding an element in front and end, removing an element from front and end, sort the Deque, reverse the Deque, getting the size of the Deque. 
+
+void print(deque<int> &A){
+    if(A.empty()){
+        cout<<-1;
+    }
+    else{
+        for(auto &i:A){
+            cout<<i<<" ";
+        }
+    }
+    cout<<endl;
+}
+void add_in_front(deque<int>& a, int x){
+    a.push_front(x);
+}
+void add_in_back(deque<int>& a, int x){
+    a.push_back(x);
+}
+void remove_from_back(deque<int>& a){
+    a.pop_back();
+}
+void remove_from_front(deque<int>& a){
+    a.pop_front();
+}
+void sort(deque<int>& a){
+    sort(a.begin(),a.end()); 
+}
+void reverse(deque<int>& a){
+    reverse(a.begin(), a.end());
+}
+int size(deque<int>&a){
+    return a.size();
+}
+int element_at_front(deque<int>&a){
+    return a.front();
+}
+int element_at_back(deque<int>&a){
+    return a.back();
+}
