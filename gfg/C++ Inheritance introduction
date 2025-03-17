@@ -1,0 +1,33 @@
+Create two classes:
+
+Cuboid
+The Cuboid class should have three data fields- length, width and height of int types. The class should have display() method, to print the length, width and height of the cuboid separated by space.
+
+CuboidVol 
+The CuboidVol class is derived from Cuboid class, i.e., it is the sub-class of Cuboid class. The class should have read_input() method, to read the values of length, width and height of the Cuboid. The CuboidVol class should also overload the display() method to print the volume of the Cuboid ( length * width * height ).
+
+//User function Template for C++
+
+class Cuboid 
+{
+   //Add your code here.
+   public:
+   float l, w, h;
+   void display(){
+      cout<<l<<" "<<w<<" "<<h<<endl; 
+   }
+};
+
+class CuboidVol: public Cuboid
+{
+    //Add your code here.
+    public:
+    void read_input(float l, float w, float h){
+      this->l=l;
+      this->w=w;
+      this->h=h;
+    }
+    void display(){
+        cout<<(h*w*l)<<endl;
+    }
+};
