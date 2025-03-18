@@ -1,0 +1,20 @@
+Rahul loves to play with numbers, he challenges his friend Ankush with a problem related to numbers in which he has to first reverse the order of two digits and then swap them. Let us take the two digits as a and b.
+
+void reverse_dig(int &a,int &b){
+    int c=0,d=0,f=10;
+    while(a){
+        c=c*f+a%10;
+        a/=10;
+    }
+    a=c;
+    while(b){
+        d=d*10+b%10;
+        b/=10;
+    }
+    b=d;
+}
+void swap(int &a,int &b){
+    int temp=a;
+    a=b;
+    b=temp;
+}
