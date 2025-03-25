@@ -1,0 +1,15 @@
+Given an array arr[] of integers, change the given array such that at any index i it contains the sum of all elements except itself. Simple way arr[i] should be arr[0] + arr[1] ... arr[i-1] + arr[i+1] ... arr[n-1].
+//User function Template for C++
+
+// arr is the array
+// n is the number of element in array
+void SumArray(int arr[], int n){
+    // you code here
+    int sum=0;
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
+    }
+    for(int i=0;i<n;i++){
+        arr[i]=sum-arr[i];
+    }
+}
