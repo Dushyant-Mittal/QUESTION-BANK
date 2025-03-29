@@ -1,0 +1,12 @@
+Given a string S of lowercase alphabets, check if it is isogram or not. An Isogram is a string in which no letter occurs more than once.
+class Solution{
+    public:
+    bool isIsogram(string s){
+        //Your code here
+        set <int> v(s.begin(),s.end());
+        if(v.size()==s.length()){
+            return 1;
+        }
+        return 0;
+    }
+};
