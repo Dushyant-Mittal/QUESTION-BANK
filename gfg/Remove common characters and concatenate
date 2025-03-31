@@ -1,0 +1,27 @@
+Given two strings s1 and s2. Modify both the strings such that all the common characters of s1 and s2 are to be removed and the uncommon characters of s1 and s2 are to be concatenated.
+Note: If all characters are removed print -1.
+class Solution{
+    public:
+    string concatenatedString(string s1, string s2){ 
+        // Your code here
+        set<char>set1(s1.begin(), s1.end()); 
+        set<char>set2(s2.begin(), s2.end()); 
+        string tmp;
+        for(int i=0; i<s1.size(); i++){
+            if(set2.find(s1[i])==set2.end()){
+                tmp=tmp+s1[i];
+            }
+        }
+        for(int i=0; i<s2.size(); i++){
+            if(set1.find(s2[i])==set1.end()){
+                tmp=tmp+s2[i];
+            }
+        }
+        if(tmp.empty()){
+            return "-1";
+        }
+        else{
+            return tmp;
+        }
+    }
+};
