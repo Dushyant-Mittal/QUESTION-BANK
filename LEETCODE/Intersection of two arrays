@@ -1,0 +1,19 @@
+Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.
+
+ class Solution {
+public:
+    vector<int> intersection(vector<int>& arr1, vector<int>& arr2) {
+        unordered_set<int> set;
+        vector<int> result;
+        for(int num:arr1){
+            set.insert(num);
+        }
+        for(int num:arr2){
+            if (set.find(num)!=set.end()){
+                result.push_back(num);
+                set.erase(num); 
+            }
+        }
+        return result;
+    }
+};
