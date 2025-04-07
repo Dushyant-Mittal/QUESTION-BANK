@@ -1,0 +1,19 @@
+Given two arrays arr1 and arr2, return the merged array in ascending order containing unique elements.
+class Solution{
+    public:
+    int mergeNsort(int a[], int b[], int n, int m, int answer[]){
+        // Write your code here
+        set<int> ans;
+        for(int i=0; i<n; i++){
+            ans.insert(a[i]);
+        }
+        for(int i=0; i<m; i++){
+            ans.insert(b[i]);
+        }
+        int i=0;
+        for(auto it:ans){
+            answer[i++]=it;
+        }
+        return ans.size();
+    }
+};
