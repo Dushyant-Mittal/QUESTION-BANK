@@ -1,0 +1,24 @@
+Given an array arr, the task is to find whether the arr is palindrome or not. If the arr is palindrome then return true else return false.
+
+An array is said to be palindrome if its reverse array matches the original array. 
+
+class Solution {
+  public:
+    bool isPerfect(vector<int> &arr) {
+        // code here
+        int n=arr.size();
+        int x=0,y=n-1;
+        while(x<y){
+            if(arr[x]!=arr[y]){
+                return false;
+                break;
+            }
+            else{
+                swap(arr[x],arr[y]);
+                x++;
+                y--;
+            }
+        }
+        return true;
+    }
+};
