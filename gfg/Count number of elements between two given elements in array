@@ -1,0 +1,28 @@
+Given an unsorted array arr[] and two elements num1 and num2. The task is to count the number of elements that occur between the given elements (excluding num1 and num2). If there are multiple occurrences of num1 and num2, we need to consider the leftmost occurrence of num1 and the rightmost occurrence of num2.
+class Solution {
+  public:
+    int getCount(vector<int> &arr, int num1, int num2) {
+        // Your code goes here.
+        int n=arr.size();
+        int left=-1, right=-1, count=0;
+        for(int i=0; i<n; i++){
+            if(arr[i]==num1) {
+                left=i;
+                break;
+            }
+        }
+        for(int i=n-1; i>=0; i--){
+            if(arr[i]==num2){
+                right=i;
+                break;
+            }
+        }
+        if(left==-1 || right==-1){
+            return 0;
+        }
+        if(left<right){
+            count=right-left-1;
+        }
+        return count;
+    }
+};
