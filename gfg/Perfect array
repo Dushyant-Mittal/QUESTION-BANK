@@ -1,0 +1,22 @@
+Given an array arr[] of non-negative integers, determine whether the array is perfect. An array is considered perfect if it first strictly increases, then remains constant, and finally strictly decreases. Any of these three parts can be empty.
+class Solution {
+  public:
+    bool isPerfect(vector<int>& arr) {
+        // code here
+        int n=arr.size(); 
+        int i=1;
+        while(i<n and arr[i]>arr[i-1]){
+            i+=1;
+        }
+        while(i<n and arr[i]==arr[i-1]){
+            i+=1;
+        }
+        while(i<n and arr[i]<arr[i-1]){
+            i+=1;
+        }
+        if(i==n){
+            return 1;
+        }
+        return 0;
+    }
+};
