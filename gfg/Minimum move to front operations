@@ -1,0 +1,16 @@
+ Given an array arr[] of distinct integers from 1 to arr.size(), count the minimum number of moveToFront operations needed to arrange the elements in ascending order (1, 2, 3, ..., arr.size()). A moveToFront operation picks any element arr[i] and places it at the first position.
+class Solution{
+  public:
+    int minMoves(int arr[],int n){
+        //code here.
+        int c=0;
+        int v=n;
+        for(int i=n-1; i>=0; i--){
+            if(arr[i]==v){
+                c++;
+                v--;
+            }
+        }
+        return n-c;
+    }
+};
