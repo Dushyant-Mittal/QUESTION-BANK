@@ -1,0 +1,20 @@
+Given the root of a binary tree, return the sum of all left leaves.
+
+A leaf is a node with no children. A left leaf is a leaf that is the left child of another node.
+
+ class Solution {
+public:
+    int sum{0};
+    int sumOfLeftLeaves(TreeNode* root) {
+        if(root==nullptr){
+            return sum;
+        }
+        if(root->left!=nullptr && root->left->left == nullptr && root->left->right == nullptr){
+            sum=sum+root->left->val;
+            cout<<sum<<endl;
+        }
+        sumOfLeftLeaves(root->left);
+        sumOfLeftLeaves(root->right);
+        return sum;
+    }
+};
