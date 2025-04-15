@@ -1,0 +1,14 @@
+You are given an array of character pairs and a string s. Your task is to count how many of the character pairs from the array appear in the string s.
+class Solution{
+public:	
+	int count_pairs(vector<char> &arr, string &s,int n,int m){
+	    // Complete the function
+	    int c=0;
+	    for(int i=0; i<n-1; i=i+2){
+	        if(s.find(arr[i])<m && s.find(arr[i+1])<m){
+	            c++;
+	        }
+	    }
+	    return c;
+	}
+};
