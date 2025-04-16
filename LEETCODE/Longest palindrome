@@ -1,0 +1,24 @@
+ Given a string s which consists of lowercase or uppercase letters, return the length of the longest palindrome that can be built with those letters.
+
+Letters are case sensitive, for example, "Aa" is not considered a palindrome.
+
+ class Solution {
+public:
+    int longestPalindrome(string s) {
+        int x=0;
+        unordered_map<char, int>map;
+        for(char ch:s){
+            map[ch]++;
+            if(map[ch]%2==1){
+                x++;
+            }
+            else{    
+                x--;
+            }
+        }
+        if(x>1){
+            return s.length()-x+1;
+        }
+        return s.length();
+    }
+};
