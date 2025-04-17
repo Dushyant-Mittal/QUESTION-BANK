@@ -1,0 +1,14 @@
+Given an array and an integer B, traverse the array (from the beginning) and if the element in array is B, double B and continue traversal. Find the value of B after the complete traversal.
+class Solution{
+    public:
+    long long solve(int n, long long a[], long long b){
+        //code here.
+        long long sum=b;
+        for(int i=0; i<n; i++){
+            if(a[i]==sum){
+                sum*=2;
+            }
+        }
+        return sum;
+    }  
+};
