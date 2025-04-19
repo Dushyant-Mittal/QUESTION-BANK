@@ -1,0 +1,18 @@
+You are given an array arr[] of integers. Your task is to find the count of elements before which all the elements are smaller. The first element is always counted as there are no elements before it.
+class Solution{
+    public:
+    long long countElements(long long arr[], long long n){
+        // Your code goes here
+        long long ans=0;
+        long long  maxi=arr[0];
+        for(int i=0; i<n; i++){
+            if(arr[i]<arr[i+1]){
+                if(arr[i+1]>maxi){
+                    ans++;
+                    maxi=arr[i+1];
+                }
+            }
+        }
+        return ans;
+    }
+};
