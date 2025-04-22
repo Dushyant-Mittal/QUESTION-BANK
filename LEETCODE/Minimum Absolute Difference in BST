@@ -1,0 +1,23 @@
+ Given the root of a Binary Search Tree (BST), return the minimum absolute difference between the values of any two different nodes in the tree.
+
+ class Solution {
+public:
+    void solve(TreeNode*root,vector<int>&v){
+        if(root==NULL){
+            return;
+        }
+        solve(root->left,v);
+        v.push_back(root->val);
+        solve(root->right,v);
+    }
+    int getMinimumDifference(TreeNode* root) {
+        vector<int>v;
+        solve(root,v);
+        int mini=INT_MAX;
+        for(int i=1;i<v.size();i++){
+            int diff=v[i]-v[i-1];
+            mini=min(mini,diff);
+        }
+        return mini;
+    }
+};
