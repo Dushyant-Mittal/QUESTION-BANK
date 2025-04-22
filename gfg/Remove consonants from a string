@@ -1,0 +1,19 @@
+ Given a string S, remove all consonants and print the modified string that contains vowels only.
+
+class Solution{
+    public:
+    string removeConsonants(string s){
+    //complete the function heredef removeConsonants(s):
+        set<char>vowels={'A','E','I','O','U','a','e','i','o','u'};
+        string tmp;
+        for (char c:s){
+            if(vowels.find(c)!=vowels.end()){
+                tmp+=c;
+            }
+        }
+        if(tmp.size()==0){
+            return "No Vowel";
+        }
+        return tmp;
+    }
+};
