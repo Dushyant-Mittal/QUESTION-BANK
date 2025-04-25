@@ -1,0 +1,19 @@
+Given an array arr of even size, the task is to find a minimum value that can be added to an element so that the array becomes balanced. An array is balanced if the sum of the left half of the array elements is equal to the sum of the right half.
+class Solution {
+  public:
+    int minValueToBalance(vector<int> &arr){
+        int len=arr.size(), fh=0, rh=0;
+        for(int i=len/2; i<=(len-1); i++){
+            rh=rh+arr[i];
+        }
+        for(int i=0; i<len/2; i++){
+            fh=fh+arr[i];
+        }
+        if(rh>fh){
+            return (rh-fh);
+        }
+        else{
+            return (fh-rh);
+        }
+    }
+};
