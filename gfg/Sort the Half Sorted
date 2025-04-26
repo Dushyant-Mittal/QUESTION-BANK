@@ -1,0 +1,8 @@
+Given an integer array of which both the first halve and second halve are sorted. The task is to merge these two sorted halves of the array into a single sorted array.
+class Solution{
+    public:
+        void sortHalves (int arr[], int n){
+            // your code here
+            sort(arr,arr+n);
+        }
+};
