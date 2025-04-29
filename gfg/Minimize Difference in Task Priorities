@@ -1,0 +1,20 @@
+You are given an array arr[] where each element represents the priority level of a task. There are k workers, and you need to assign exactly one task to each worker such that:
+
+The difference between the highest and lowest priority levels among the assigned tasks is minimized.
+At least m out of the k assigned tasks must have a priority level greater than or equal to a given threshold t.
+Note: Return -1, if no valid assignment exists.
+class Solution{
+  public:
+    int minDiff(int arr[], int N, int K){
+        sort(arr,arr+N);
+        vector<int>ans;
+        int i=0;
+        while(K<=N){
+            ans.push_back(arr[K-1]-arr[i]);
+            K++;
+            i++;
+        }
+        sort(ans.begin(), ans.end());
+        return ans[0];
+    }
+};
