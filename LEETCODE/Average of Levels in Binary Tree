@@ -1,0 +1,26 @@
+Given the root of a binary tree, return the average value of the nodes on each level in the form of an array. Answers within 10-5 of the actual answer will be accepted.
+ class Solution {
+public:
+    vector<double> averageOfLevels(TreeNode* root) {
+        vector<double>ans;
+        queue<TreeNode*>q;
+        q.push(root);
+        while(!q.empty()){
+            int s=q.size();
+            double sum=0;
+            for(int i=0;i<s;i++){
+                TreeNode * node=q.front();
+                q.pop();
+                sum+=node->val;
+                if(node->left!=NULL){
+                    q.push(node->left);
+                }
+                if(node->right!=NULL){
+                    q.push(node->right);
+                }
+            }
+            ans.push_back(sum/s);
+        }
+        return ans;
+    }
+};
