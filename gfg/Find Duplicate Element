@@ -1,0 +1,12 @@
+ Given a sorted array arr[] having 10 elements which contain 6 different numbers in which only 1 number is repeated five times. Your task is to find the duplicate number using two comparisons only.
+int findDuplicate(int A[]){
+    // Your code goes here
+    int i=0;
+    while(A){
+        if(A[i]==A[i+1]){
+            return A[i];
+            break;
+        }
+        i++;
+    }
+}
