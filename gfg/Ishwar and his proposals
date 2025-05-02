@@ -1,0 +1,14 @@
+Ishwar has got proposals from N girls. Each girl gives him a rose with a number written on it where the number represents the popularity of that girl. Ishwar decides that he'll accept the proposal of the second most popular and the second least popular girl only. Can you help him finding the popularity of those girls?
+Note: The popularity of all the girls are unique.
+
+class Solution
+{
+  public:
+    vector <int> acceptedProposals (vector <int> &arr, int n)
+    {
+        //code here.
+        sort(arr.begin(),arr.end());
+        return {arr[n-2],arr[1]};
+    }
+
+};
