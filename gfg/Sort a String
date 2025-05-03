@@ -1,0 +1,6 @@
+Given a string consisting of lowercase letters, arrange all its letters in ascending order. 
+string sort(string s){
+    //complete the function here
+    sort(s.begin(),s.end());
+    return s;
+}
