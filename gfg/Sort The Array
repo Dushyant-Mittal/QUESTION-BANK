@@ -1,0 +1,10 @@
+Given a random array arr of numbers, please return them in ascending sorted order. 
+Note: Use Inbuilt functions to Sort the given array
+class Solution {
+  public:
+    vector<int> sortArr(vector<int> arr) {
+        // complete the function here
+        sort(arr.begin(),arr.end());
+        return arr;
+    }
+};
