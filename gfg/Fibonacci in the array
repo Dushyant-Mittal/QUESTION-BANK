@@ -1,0 +1,30 @@
+Given an array arr of integers, the task is to count the number of elements of the array which are Fibonacci numbers
+class Solution{
+  public:
+    int countFibonacciNumbers(vector<long long>& arr){
+        // code here
+        int c=0;
+        for(long i:arr){
+            if(F(i)){
+                c++;
+            }
+        }
+        return c;
+    }
+    bool F(long n){
+        if(n==0){
+            return true;
+        }
+        int a=0,b=1;
+        int r=a+b;
+        while(r<=n){
+            if(r==n){
+                return true;
+            }
+            a=b;
+            b=r;
+            r=a+b;
+        }
+        return false;
+    }
+};
