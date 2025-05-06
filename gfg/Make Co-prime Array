@@ -1,0 +1,16 @@
+Given an array of elements, find the minimum number of insertions to convert the given array into a co-prime array adjacent pair-wise. 
+//User function template for C++
+class Solution{
+public:	
+	int countCoPrime(int arr[], int n){
+	    // Complete the function
+	    int c=0;
+        for(int i=0;i<n-1;i++){
+            if(__gcd(arr[i],arr[i+1])!=1){
+                c++;
+            }
+        }
+        return c++;
+	}
+
+};
