@@ -1,0 +1,22 @@
+Given a number S. Check whether it is divisble by 11 or not.
+class Solution{
+public:	
+	int divisibleBy11 (string S){
+	    // Your Code Here
+	    int odd=0, even=0;
+        for(int i=0; i<S.size(); i++){
+            if(i%2){
+                odd+=(S[i]-'0');
+            }
+            else{
+                even+=(S[i]-'0');
+            }
+        }
+        if((odd-even)%11==0){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+	}
+};
