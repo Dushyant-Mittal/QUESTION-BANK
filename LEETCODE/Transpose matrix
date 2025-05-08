@@ -1,0 +1,17 @@
+Given a 2D integer array matrix, return the transpose of matrix.
+
+The transpose of a matrix is the matrix flipped over its main diagonal, switching the matrix's row and column indices.
+class Solution {
+public:
+    vector<vector<int>> transpose(vector<vector<int>>& matrix) {
+        vector<vector<int>> res;
+        for (int c=0; c<matrix[0].size(); c++){
+            vector<int> temp;
+            for (int r=0; r<matrix.size(); r++){
+                temp.push_back(matrix[r][c]);
+            }
+            res.push_back(temp);
+        }
+        return res;        
+    }
+};
