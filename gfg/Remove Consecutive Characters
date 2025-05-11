@@ -1,0 +1,16 @@
+You are given a string s, consisting of lowercase alphabets. Your task is to remove consecutive duplicate characters from the string. 
+class Solution{
+    public:
+    string removeConsecutiveCharacter(string S){
+        // code here.
+        int n=S.length();
+        string str;
+        str.push_back(S[0]);
+        for(int i=1; i<n; i++){
+            if(str.back()!=S[i]){
+                str=str+S[i];
+            }
+        }
+        return str;
+    }
+};
