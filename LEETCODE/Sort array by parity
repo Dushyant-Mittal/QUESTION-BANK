@@ -1,0 +1,21 @@
+ Given an integer array nums, move all the even integers at the beginning of the array followed by all the odd integers.
+
+Return any array that satisfies this condition.
+
+ class Solution {
+public:
+    vector<int> sortArrayByParity(std::vector<int>& nums) {
+        vector<int>result;
+        for(int i:nums){
+            if(i%2==0){
+                result.push_back(i);
+            }
+        }
+        for(int j:nums){
+            if(j%2!=0){
+                result.push_back(j);
+            }
+        }
+        return result;
+    }
+};
