@@ -1,0 +1,18 @@
+You are given an array arr[] where each element represents the amount of goodies currently held by students. Each student at index i should receive exactly i amount of goodies (1-based indexing) for a fair distribution, with no wastage allowed. Your task is to determine whether it is possible to redistribute the goodies such that the student at index i gets exactly i amount of goodies. Return true if it is possible otherwise return false.
+class Solution{
+  public:
+    bool possible(long long arr[], long long n){
+        //code here.
+        int c=0;
+        int ans=n*(n+1)/2;
+        for(int i=0; i<n; i++){
+            c+=arr[i];
+        }
+        if(c==ans){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+};
