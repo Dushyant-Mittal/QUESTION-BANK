@@ -1,0 +1,14 @@
+Given an array arr[] of numbers from 0 to 9. Your task is to rearrange elements of the array such that after combining all the elements of the array, the number formed is maximum.
+class Solution {
+  public:
+    string MaxNumber(vector<int>& arr) {
+        // code here.
+        string s= "";
+        sort(arr.begin(), arr.end());
+        reverse(arr.begin(), arr.end());
+        for(int i=0; i<arr.size(); i++){
+            cout<<arr[i];
+        }
+        return s;
+    }
+};
