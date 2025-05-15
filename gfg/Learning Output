@@ -1,0 +1,23 @@
+ Being a Programmer you have to learn how to make your output looks better. According to the company, its company programmers have to present its output in a different manner as: If your output is 10.000000 you can save the decimal places and thus your output becomes 10. Now u have the learn the way to output.  You are given elements of an array A[N] and you have to divide N by total no. of +ve integers, N by total no. of -ve integers, and N by total no. of zero value integers.
+
+ class Solution{
+    public:
+    void Learning(int a[], int n, float &pos, float &neg, float &zero ){
+        // Your code goes here
+        int P=0, N=0, Z=0;
+        for(int i=0; i<n; i++){
+            if(a[i]>0){
+                P++;
+            }
+            else if(a[i]<0){
+                N++;
+            }
+            else{
+                Z++;
+            }
+        }
+        pos=n*1.0/P;
+        neg=n*1.0/N;
+        zero=n*1.0/Z;
+    }
+};
