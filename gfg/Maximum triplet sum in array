@@ -1,0 +1,10 @@
+ Given an array arr, the task is to find the maximum triplet sum in the array.c
+lass Solution{
+    public:
+    int maxTripletSum(int arr[], int n)
+    {
+    	// Complete the function
+    	sort(arr,arr+n);
+    	return arr[n-1]+arr[n-3]+arr[n-2];
+    }
+};
