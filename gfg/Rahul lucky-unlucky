@@ -1,0 +1,26 @@
+ You are given a string s consisting of characters 'H' (heads) and 'T' (tails). The goal is to perform the minimum number of operations to flip all the coins to heads.
+
+An operation consists of flipping both the coin at the index i and the coin at the index i+1 if the coin at the index i is a tail ('T'). Additionally, you can flip the coin at the last index N (using 1-based indexing) if it's a tail. This operation can be performed for any index i such that 1 <= i <= N.
+class Solution{
+    public:
+    int flippedIndexes(char a[], int n, int getAnswer[]){
+        // Your code goes here
+        vector<int>v;
+        for(int i=0;i<n;i++){
+            if(a[i]=='T'){
+              a[i]='H';
+              if(a[i+1]=='T'){
+                a[i+1]='H';
+              }  
+              else{
+                a[i+1]='T';
+              }
+              v.push_back(i+1);
+            }
+        }
+        for(int i=0;i<v.size();i++){
+            getAnswer[i]=v[i];
+        }
+        return v.size();
+    }
+};
