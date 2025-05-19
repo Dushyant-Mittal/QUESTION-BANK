@@ -1,0 +1,12 @@
+Given an array arr[] representing the size of candles which is reduced by 1 unit each day. The room is illuminated using all the present candles. Find the maximum number of days the room will stay illuminated (at least one candle having a size greater than 0)
+// User function template for C++
+
+class Solution {
+  public:
+    int maxDays(vector<int> &arr) {
+        // code here
+        sort(arr.begin(),arr.end());
+        int n=arr.size();
+        return arr[n-1];
+    }
+};
