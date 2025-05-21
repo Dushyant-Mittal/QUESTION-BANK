@@ -1,0 +1,16 @@
+You are given two arrays, employee and salary, where employee[i] denotes the name of the ith employee, and salary[i] denotes the salary of the ith employee. Your task is to sort the employee array based on their salaries in non-decreasing order. If two or more employees have the same salary, sort them alphabetically by their names. Return the sorted employee array
+class Solution{
+	public:
+	static bool comp(node& a, node& b){
+        if(a.salary==b.salary){
+            return a.name<b.name;
+        }
+        else{
+            return a.salary<b.salary;
+        }
+    }
+    void sortRecords(node arr[], int n){
+        // Your code goes here
+        sort(arr,arr+n,comp);
+    }
+};
