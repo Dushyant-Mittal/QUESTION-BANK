@@ -1,0 +1,21 @@
+ Given an array arr[] of integers, find the number of pairs whose XOR is odd in the array.
+class Solution{
+	public:
+	long long countXorPair(long long arr[], int n){
+        // Your code goes here
+        int Even=0;
+        int Odd=0;
+        for(int i=0; i<n; i++){
+            if(arr[i]%2==0){
+                Even++;
+            }
+            else{
+                Odd++;
+            } 
+        }
+        return (long)(Even*Odd);
+	}
+	 
+
+};
+	  
