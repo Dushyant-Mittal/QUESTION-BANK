@@ -1,0 +1,13 @@
+Given an array arr, you need to reverse a subarray of that array. The range of this subarray is given by indices l and r (1-based indexing).
+class Solution {
+  public:
+    vector<int> reverseSubArray(vector<int> &arr, int l, int r) {
+        // code here
+        int s=l-1;
+        int e=r-1;
+        while(s<e){
+            swap(arr[s++],arr[e--]);
+        }
+        return arr;
+    }
+};
