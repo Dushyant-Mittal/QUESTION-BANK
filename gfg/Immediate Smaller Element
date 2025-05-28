@@ -1,0 +1,20 @@
+Given an integer array arr. For each element in the array, check whether the right adjacent element (on the next immediate position) of the array is smaller. If the next element is smaller, update the current index to that element. If not, then update to -1.
+
+Note: Update the array in itself.
+//User function template for C++
+class Solution{
+public:	
+	void immediateSmaller(vector<int>&arr, int n) {
+	    //  code here
+	    for(int i=0; i<n-1; i++){
+            if(arr[i]>arr[i+1]){
+                arr[i]=arr[i+1];
+            }
+            else{
+                arr[i]=-1;
+            }
+	    }
+        arr[n-1] = -1;
+	}
+
+};
