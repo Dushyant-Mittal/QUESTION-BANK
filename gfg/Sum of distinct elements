@@ -1,0 +1,17 @@
+ You are given an array arr. Find the sum of distinct elements in an array.//User function template for C++
+class Solution{
+public:	
+	// Find the sum of all non-repeated elements
+	// in an array
+	int findSum(int arr[], int n) {
+	    // code here
+	    sort(arr,arr+n);
+	    int c=arr[0];
+	    for(int i=0; i<n-1; i++){
+	        if(arr[i]!=arr[i+1]){
+	            c+=arr[i+1];
+	        }
+	    }
+	    return c;
+	}
+};
