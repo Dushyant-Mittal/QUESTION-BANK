@@ -1,0 +1,19 @@
+ Given a string containing multiple words, count the characters in each word and display them.
+class Solution{   
+public:
+    vector<int> countChars (string s){
+        // code here
+        vector<int>v;
+        int cnt=0;
+        for(int i=0; i<s.size(); i++){
+            if(s[i]!=' '){
+                cnt++;
+                continue;
+            }
+            v.push_back(cnt);
+            cnt=0;
+        }
+        v.push_back(cnt);
+        return v;
+    }
+};
