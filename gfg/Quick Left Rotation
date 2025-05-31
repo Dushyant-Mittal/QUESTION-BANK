@@ -1,0 +1,16 @@
+ Given an array, arr[] of positive elements, and an integer k, the task is to left-rotate the array k indexes.
+Note: Rotate the array even if the k is greater than the size of the array. In these cases after every full array rotation, the array comes the same as the original array.
+class Solution {
+  public:
+    void leftRotate(vector<int>& arr, int k) {
+        // Your code goes here
+        int n=arr.size();
+        k=k%n;  
+        if(k==0){
+            return;
+        }
+        reverse(arr.begin(), arr.begin()+k);
+        reverse(arr.begin()+k, arr.end());
+        reverse(arr.begin(), arr.end());
+    }
+};
