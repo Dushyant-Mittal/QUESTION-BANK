@@ -1,0 +1,19 @@
+Given a string S, find whether it fulfills the following criteria. 
+When split from the middle, the string should give two halves having the same characters and same frequency of each character. If the number of characters in the string is odd, ignore the middle character.
+class Solution {
+public:
+    bool passed (string s) {
+        //code here.
+        string str1="";
+        string str2="";
+        for(int i=0; i<s.length()/2; i++){
+             str1+=s[i];
+        }
+        for(int i=s.length() -1;i>=s.length()-s.length()/2;i--){
+            str2+=s[i];
+        }
+        sort(str1.begin(),str1.end());
+        sort(str2.begin(),str2.end());
+        return str1==str2?1:0;
+    }
+};
