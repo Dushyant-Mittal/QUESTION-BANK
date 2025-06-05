@@ -1,0 +1,15 @@
+ A Duck number is a positive number which has zeroes present in it, For example, 3210, 8050896, 70709 are all Duck numbers. A number with only leading 0s is not considered as Duck Number. For example, numbers like 035 or 0012 are not considered as Duck Numbers. A number like 01203 is considered as Duck because there is a non-leading 0 present in it.
+The task is to check whether the given number N is a Duck number or not.
+
+ bool check_duck(string N){
+    //code
+    if(N[0]=='0'){
+        return false;
+    }
+    for(int i=1;i<N.size();i++){
+       if(N[i]=='0'){
+           return true;
+       }
+    }
+    return false;
+}
