@@ -1,0 +1,19 @@
+ There is a hacker named "Vijay" who has developed a method to check whether an id at some social networking site is fake or real using its username.
+
+His method includes: if the number of distinct consonent characters in one's user name is odd, then the user is a male, otherwise a female. You are given the string that denotes the user name, please help Vijay to determine the gender of this user by his method. Ignore the vowels.
+Note: The input only contains lowercase English alphabets.
+string solve(string a) {
+    // code here
+    unordered_set<char>st;
+    for(int i=0; i<a.size(); i++){
+        if((a[i]!='a')&&(a[i]!='e')&&(a[i]!='i')&&(a[i]!='o') 
+            &&(a[i]!='u')&&(st.find(a[i])==st.end())){
+            st.insert(a[i]);
+        }
+    }
+    int count=st.size();
+    if((count%2)==1){
+        return "HE!";
+    }
+    return "SHE!";
+}
