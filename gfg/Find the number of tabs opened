@@ -1,0 +1,20 @@
+ You are given an array arr[], where each element is either a tab ID or the string "END". If a tab ID appears, toggle its state (open if it's closed, or close if it's open). If "END" appears, close all open tabs. Your task is to determine the number of tabs that remain open after all operations are completed.
+class Solution {
+  public:
+    int countTabs(vector<string> &arr) {
+        // Your Code goes here.
+        unordered_set<string>s;
+        for(int i=0; i<arr.size(); i++){
+            if(arr[i]=="END"){
+                s.clear();
+            }
+            else if(s.find(arr[i])!=s.end()){
+                s.erase(arr[i]);
+            }
+            else{
+                s.insert(arr[i]);
+            }
+        }
+        return s.size();
+    }
+};
