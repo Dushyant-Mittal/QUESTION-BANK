@@ -1,0 +1,17 @@
+ Given a string consisting of lowercase english alphabets. Find the repeated character present first in the string.
+class Solution{
+  public:
+    char firstRep (string s){
+        //code here.
+        string ans="#";
+        for(int i=0; i<s.length(); i++){
+            for(int j=i+1; j<s.length(); j++){
+                if(s[i]==s[j]){
+                    return s[i];
+                    break;
+                }
+            }
+        }
+        return '#';
+    }
+};
