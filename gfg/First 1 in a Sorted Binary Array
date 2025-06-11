@@ -1,0 +1,16 @@
+Given a sorted array arr consisting of 0s and 1s. The task is to find the index (0-based indexing) of the first 1 in the given array.
+
+NOTE: If one is not present then, return -1.
+class Solution {
+  public:
+    int firstIndex(vector<int> &arr) {
+        // Your code goes here
+        for(int i=0; i<arr.size(); i++){
+            if(arr[i]==1){
+                return i;
+                break;
+            }
+        }
+        return -1;
+    }
+};
