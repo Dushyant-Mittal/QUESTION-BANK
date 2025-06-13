@@ -1,0 +1,23 @@
+ Given an integer k, return the minimum number of Fibonacci numbers whose sum is equal to k. The same Fibonacci number can be used multiple times.
+
+The Fibonacci numbers are defined as:
+
+F1 = 1
+F2 = 1
+Fn = Fn-1 + Fn-2 for n > 2.
+It is guaranteed that for the given constraints we can always find such Fibonacci numbers that sum up to k.
+ class Solution {
+public:
+    int findMinFibonacciNumbers(int k) {
+        if(k<=1){
+            return k;
+        }
+        int a=1,b=1,c=2;
+        while(c<=k){
+            a=b;
+            b=c;
+            c=a+b;
+        }
+        return 1+findMinFibonacciNumbers(k-b);
+    }
+};
