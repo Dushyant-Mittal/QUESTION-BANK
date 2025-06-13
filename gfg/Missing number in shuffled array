@@ -1,0 +1,17 @@
+ Given an array arr1. The contents of arr are copied into another array arr2 and numbers are shuffled. Also, one element is removed from arr2. The task is to find the missing element.
+
+class Solution{
+    public:
+    long long findMissing(long long a[], long long b[], int n)
+    {
+        long long a1 =0;
+        long long b1=0;
+        for(int i=0; i<n; i++){
+            a1=a1+a[i];
+        }
+        for(int i=0; i<n-1; i++){
+            b1=b1+b[i];
+        }
+        return a1-b1;
+    }
+};
