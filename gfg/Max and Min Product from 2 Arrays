@@ -1,0 +1,10 @@
+Given two arrays of arr1 and arr2, the task is to calculate the product of the maximum element of the first array arr1, and minimum element of the second array arr2.
+class Solution {
+  public:
+    long long find_multiplication(vector<int> &arr1, vector<int> &arr2) {
+        // code here
+        sort(arr1.begin(),arr1.end());
+        sort(arr2.begin(),arr2.end());
+        return arr1.back()*arr2.front();
+    }
+};
