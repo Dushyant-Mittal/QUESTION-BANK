@@ -1,0 +1,12 @@
+ Given a string s consisting of only '0's and '1's,  find the last index of the '1' present.
+class Solution {
+  public:
+    int lastIndex(string s){
+        for(int i=s.size(); i>=0; i--){
+            if(s[i]=='1'){
+                return i;
+            }
+        }
+        return -1;
+    }
+};
