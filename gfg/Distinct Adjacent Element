@@ -1,0 +1,17 @@
+ Given an array arr[] of integers, the task is to check whether obtaining an array with distinct adjacent elements is possible by swapping two neighboring array elements.
+class Solution{
+	public:
+	bool distinctAdjacentElement(int arr[], int n){ 
+    unordered_map<int, int> map;
+    for(int i = 0; i<n; i++){
+        map[arr[i]]++;
+        
+    }
+    for(auto it:map){
+        if(it.second>(n+1)/2){
+            return false;
+        }
+    }
+    return true;
+} 
+};
