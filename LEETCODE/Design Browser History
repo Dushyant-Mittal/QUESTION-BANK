@@ -1,0 +1,47 @@
+ You have a browser of one tab where you start on the homepage and you can visit another url, get back in the history number of steps or move forward in the history number of steps.
+class BrowserHistory {
+public:
+    stack<string> x;
+    stack<string> y;
+    BrowserHistory(string homepage) {
+        x.push(homepage);
+    }
+    void visit(string url) {
+        while(!y.empty()){
+            y.pop();;
+        }   
+        x.push(url);
+    }
+    string back(int steps) {
+        while(steps--){
+            if(x.size()>1){
+                y.push(x.top());
+                x.pop();
+            }
+            else{
+                break;
+            }
+        }
+        return x.top();
+    }
+    string forward(int steps) {
+        while(steps--){
+            if(y.size()>0){
+                x.push(y.top());
+                y.pop();
+            }
+            else{
+                break;
+            }
+        }
+        return x.top();
+    }
+};
+
+/**
+ * Your BrowserHistory object will be instantiated and called as such:
+ * BrowserHistory* obj = new BrowserHistory(homepage);
+ * obj->visit(url);
+ * string param_2 = obj->back(steps);
+ * string param_3 = obj->forward(steps);
+ */
