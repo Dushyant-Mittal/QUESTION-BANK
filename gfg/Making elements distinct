@@ -1,0 +1,15 @@
+ Given a sorted integer array. We need to make array elements distinct by increasing values and keeping the array sum minimum possible. We need to print the minimum possible sum as output.
+long long int minSum(int arr[], int n){
+	// Complete the function
+	long ans = 0;
+    ans = ans+(long)arr[0];
+    for(int i=1;i<n;i++){
+        if(arr[i]<=arr[i-1]){
+            while(arr[i]<=arr[i-1]){
+                arr[i]++;
+            }
+        }
+        ans = ans+(long)arr[i];
+    }
+    return ans;
+}
