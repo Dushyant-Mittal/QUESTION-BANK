@@ -1,0 +1,7 @@
+Given a string s containing only lowercase alphabets, the task is to sort it in lexicographically-descending order.
+string ReverseSort(string str){
+    //complete the function here
+    sort(str.begin(),str.end());
+    reverse(str.begin(),str.end());
+    return str;
+}
