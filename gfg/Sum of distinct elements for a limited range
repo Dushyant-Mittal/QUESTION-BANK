@@ -1,0 +1,17 @@
+Given an array, arr[] such that every element of the array is an integer in the range 1 to n (n is the size of arr), the task is to find the sum of all the distinct elements of the array.
+class Solution{
+	public:
+	int sumOfDistinct(int arr[], int n){ 
+	    // Your code goes here
+	    sort(arr,arr+n);
+	    int c=arr[0];
+	    for(int i=0; i<n-1; i++){
+	        if(arr[i]!=arr[i+1]){
+	            c+=arr[i+1];
+	        }
+	    }
+	    return c;
+	} 
+		 
+
+};
