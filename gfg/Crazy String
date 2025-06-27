@@ -1,0 +1,19 @@
+ You have given a non-empty string. This string can consist of lowercase and uppercase english alphabets. Convert the string into an alternating sequence of lowercase and uppercase characters without changing the character at the 0th index.
+string getCrazy (string S){
+    // your code here
+    string tmp="";
+    tmp+=S[0];
+    if(S[0]>='a' && S[0]<='z'){
+        for(int i=1; i<S.size(); i+=2){
+           tmp+=toupper(S[i]);
+           tmp+=tolower(S[i+1]);
+        }
+    }
+    else{
+        for(int i=1; i<S.size(); i+=2){
+            tmp+=tolower(S[i]);
+            tmp+=toupper(S[i+1]);
+        }
+    }
+    return tmp;
+}
