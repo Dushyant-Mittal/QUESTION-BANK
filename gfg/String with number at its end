@@ -1,0 +1,20 @@
+ Given string s that is appended with a number at last. The task is to check whether the length of string excluding that number is equal to that number.
+
+//User function template for C++
+class Solution{
+public:	
+	int isSame(string s){
+	    // Your code goes here
+	    int num=0;
+        int cnt=0;
+        for(int i=0;i<s.length();i++){
+            if(s[i]>='a'&&s[i]<='z'||s[i]>='A'&&s[i]<='Z'){
+                cnt++;
+            }
+            else{
+                num=(num*10)+(s[i]-'0');
+            }
+        }
+        return num==cnt?1:0;
+	}
+};
