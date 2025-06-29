@@ -1,0 +1,22 @@
+ The two countries of A and B are at war against each other. The power of these soldiers is given by arr1[i] of A and arr2[i] of B. They can only attack their counterpart enemies like arr1[i] can attack only arr2[i] and not anyone else. Both countries have equal number of counterparts. A soldier with a higher power can kill the enemy soldier. If both soldiers have the same power, they both die. You need to find the winning country.
+string Country_at_war(int a[], int b[], int n){
+    // Complete the function
+    int cntA=0,cntB=0;
+    for(int i=0; i<n; i++){
+        if(a[i]>b[i]){
+            cntA++;
+        }
+        else if(a[i]<b[i]){
+            cntB++;
+        }
+    }
+    if(cntA>cntB){
+        return "A";
+    }
+    else if(cntA<cntB){
+        return "B";
+    }
+    else{ 
+        return "DRAW";
+    }
+}
