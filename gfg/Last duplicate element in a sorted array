@@ -1,0 +1,13 @@
+ You are given a sorted array arr[] that may contain duplicate elements. Your task is to find the index of the last occurrence of any duplicate element and return the index along with the value of that element. If no duplicate element is found, return [-1, -1].
+vector<int> dupLastIndex(int arr[], int n) {
+    // Complete the function
+    if(arr[n-1]==arr[n-2]){
+        return {n-1, arr[n-1]} ;
+    }
+    for(int i=n-2; i>=1; i--){
+        if(arr[i]==arr[i-1]){
+            return {i,arr[i]} ;
+        }
+    }
+    return {-1} ;
+}
