@@ -1,0 +1,18 @@
+ Given an array arr[] containing integers in the range from 1 to n, we need to find the inverse permutation of that array.
+Inverse Permutation is a permutation that you will get by inserting the position of an element at the position specified by the element value in the array. For a better understanding, consider the following example:
+Suppose we found element 4 at position 3 in an array, then in reverse permutation, we insert 3 (position of element 4 in the array) in position 4 (element value).
+vector<int> inversePermutation(int arr[], int size) {
+
+    vector<int>v;
+
+    v.assign(size,0);
+
+    for(int i=0;i<size;i++){
+
+        v[arr[i]-1]=i+1;
+
+    }
+
+    return v;
+
+}
