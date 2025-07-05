@@ -1,0 +1,15 @@
+Chunky gets happy by eating Melody. Given an array arr[], each element represents the happiness Chunky gets by eating the melody.
+Chunky knows why Melody is so chocolaty but will only tell you once you tell him the maximum happiness he can get by eating two adjacent melodies.
+
+
+int max_adjacent_sum(int arr[], int n){
+    // Complete the function
+    vector<int>v;
+    int sum = 0;
+    for(int i=0; i<n-1; i++){
+        sum = arr[i] + arr[i+1];
+        v.push_back(sum);
+    }
+    int ans = *max_element(v.begin(),v.end());
+    return ans;
+}
