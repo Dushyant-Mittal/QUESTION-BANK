@@ -1,0 +1,21 @@
+ You are given an integer array nums and two integers limit and goal. The array nums has an interesting property that abs(nums[i]) <= limit.
+
+Return the minimum number of elements you need to add to make the sum of the array equal to goal. The array must maintain its property that abs(nums[i]) <= limit.
+
+Note that abs(x) equals x if x >= 0, and -x otherwise.
+
+ class Solution {
+public:
+    int minElements(vector<int>& nums, int limit, int goal) {
+        long long sum=0;
+        int n=nums.size();
+        for(int i=0;i<n;i++){
+            sum=sum+nums[i];
+        }
+        long ans=abs(sum-goal);
+        if(ans%limit){
+            return (ans/limit)+1;
+        }
+        return ans/limit;
+    }
+};
