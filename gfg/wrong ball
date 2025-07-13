@@ -1,0 +1,12 @@
+There is a table on which N balls are kept starting from index 1 to N in horizontal direction. Each ball is either of  red (denoted by 'R') or of blue (denoted by 'B') color. Any red ball which is placed on even indices and blue balls placed on odd indices is considered as wrongly placed. You need return the number of balls placed wrong on the table.
+
+ int countWrongPlacedBalls(string s){
+    //code here.
+    int count=0;
+    for(int i=0; i<s.length(); i++){
+        if((i+1)%2==0 && s[i]=='R'|| (i+1)%2!=0 && s[i]=='B'){
+            count++;
+        }
+    }
+    return count;
+}
