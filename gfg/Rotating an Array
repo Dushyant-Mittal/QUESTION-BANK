@@ -1,0 +1,12 @@
+Given an array arr[]. The task is to rotate the array by d elements where d ≤ arr.size.
+// User function template for C++
+
+class Solution {
+  public:
+    void leftRotate(vector<int>& arr, int d) {
+        // code here
+        reverse(arr.begin(),arr.begin()+d);
+        reverse(arr.begin()+d,arr.end());
+        reverse(arr.begin(),arr.end());
+    }
+};
