@@ -1,0 +1,18 @@
+You are given an array arr[] consisting of a permutation of the set {1, 2, 3, …, n} for some positive integer n. The task is to calculate the total distance you must travel starting from the position of 1 in the array, then moving to the position of 2, and so on, until you reach the position of n.
+
+class Solution{   
+public:
+    long long distance(int arr[], int n){
+        // code here
+        vector<pair<int,int>>v;
+        for(int i=0; i<n; i++){
+            v.push_back(make_pair(arr[i],i));
+        }
+        sort(v.begin(),v.end());
+        long long ans=0;
+        for(int i=1; i<n; i++){
+            ans+=abs(v[i].second-v[i-1].second);
+        }
+        return ans;
+    }
+};
