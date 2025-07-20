@@ -1,0 +1,18 @@
+Given an array arr of integers which may or may not contain duplicate elements. Your task is to remove duplicate elements.
+
+class Solution {
+  public:
+    vector<int> removeDuplicate(vector<int>&A) {
+        // code here
+        int N=A.size();
+        vector<int> ans;
+        map<int,int> hash;
+        for(int i=0; i<N; i++){
+            if(hash.find(A[i])==hash.end()){
+                hash[A[i]]==1;     
+                ans.push_back(A[i]);
+            } 
+        }
+        return ans;
+    }
+};
