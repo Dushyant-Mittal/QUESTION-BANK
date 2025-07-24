@@ -1,0 +1,12 @@
+Given an array arr. Your task is to find the minimum and maximum elements in the array.
+// User function Template for C++
+class Solution {
+  public:
+    pair<long long, long long> getMinMax(vector<long long int> arr) {
+        // code here
+        sort(arr.begin(),arr.end());
+        long long int min = 0;
+        long long int max = arr.size()-1;
+        return make_pair(arr[min],arr[max]);
+    }
+};
